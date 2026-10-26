@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111827">
+<title>Urna da Galera</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f8fafc;background:#0b1020}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 15% 0%,#273b70 0,transparent 40%),radial-gradient(ellipse at 90% 30%,#4a1d67 0,transparent 35%),#0b1020}
+.wrap{width:min(100% - 28px,920px);margin:0 auto;padding:28px 0 42px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.logo{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#60a5fa,#a78bfa);font-size:25px;box-shadow:0 8px 30px #6366f155}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#a5b4fc;font-weight:800}.brand h1{font-size:clamp(20px,4vw,30px);margin:2px 0 0}.pill{border:1px solid #ffffff22;background:#ffffff0c;padding:8px 12px;border-radius:99px;color:#cbd5e1;font-size:12px;white-space:nowrap}.hero{text-align:center;padding:20px 0 24px}.hero .emoji{font-size:44px;animation:bob 2s ease-in-out infinite}.hero h2{font-size:clamp(27px,6vw,44px);line-height:1.08;margin:8px 0 12px;letter-spacing:-.04em}.hero p{color:#cbd5e1;margin:0 auto;max-width:520px;line-height:1.6}.panel{border:1px solid #ffffff1c;background:#111a2dcc;border-radius:28px;padding:clamp(16px,4vw,28px);box-shadow:0 25px 70px #0005;backdrop-filter:blur(14px)}.choices{display:grid;grid-template-columns:1fr 1fr;gap:14px}.choice{min-height:180px;border:0;border-radius:22px;padding:22px 12px;color:white;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;transition:transform .18s,filter .18s,box-shadow .18s}.choice:hover{transform:translateY(-4px);filter:brightness(1.08)}.choice:active{transform:scale(.97)}.choice:disabled{opacity:.48;cursor:not-allowed;transform:none}.true{background:linear-gradient(145deg,#16a34a,#047857);box-shadow:0 12px 28px #05966935}.false{background:linear-gradient(145deg,#f43f5e,#be123c);box-shadow:0 12px 28px #e11d4835}.choice .symbol{font-size:42px;line-height:1}.choice strong{font-size:clamp(19px,3.5vw,25px)}.choice small{font-size:12px;opacity:.9}.notice{min-height:26px;text-align:center;margin:16px 0 0;color:#c4b5fd;font-size:14px}.results{margin-top:18px}.result-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:16px}.result-head h3{font-size:19px;margin:0}.total{font-size:13px;color:#cbd5e1}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{background:#ffffff08;border:1px solid #ffffff12;padding:15px;border-radius:18px}.statline{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin-bottom:10px}.statline strong{font-size:15px}.track{height:10px;background:#ffffff14;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;border-radius:99px;transition:width .55s cubic-bezier(.2,.8,.2,1)}.fill.green{background:linear-gradient(90deg,#4ade80,#10b981)}.fill.red{background:linear-gradient(90deg,#fb7185,#e11d48)}.bigpct{font-size:27px;font-weight:850;letter-spacing:-.04em;margin:8px 0 2px}.caption{color:#94a3b8;font-size:12px}.footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;flex-wrap:wrap}.status{display:flex;align-items:center;gap:8px;color:#94a3b8;font-size:12px}.dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 12px #34d399}.admin{margin-top:22px;border-top:1px solid #ffffff12;padding-top:16px}.admin summary{cursor:pointer;color:#a5b4fc;font-size:13px}.adminrow{display:flex;gap:8px;margin-top:12px}.adminrow input{min-width:0;width:130px;background:#080e1d;border:1px solid #ffffff24;border-radius:12px;padding:12px;color:white;font-size:16px}.secondary{border:1px solid #ffffff25;background:#ffffff0c;color:#f8fafc;border-radius:12px;padding:11px 14px;cursor:pointer;font-weight:700}.secondary:hover{background:#ffffff18}.tiny{font-size:11px;color:#64748b;line-height:1.5;margin-top:14px}.confetti{position:fixed;pointer-events:none;z-index:10;font-size:28px;animation:pop 1s ease-out forwards}@keyframes bob{50%{transform:translateY(-7px) rotate(3deg)}}@keyframes pop{0%{opacity:1;transform:translateY(0) scale(.5) rotate(0)}100%{opacity:0;transform:translateY(-120px) scale(1.5) rotate(35deg)}}@media(max-width:520px){.wrap{width:min(100% - 20px,920px);padding-top:16px}.top{align-items:flex-start}.pill{font-size:10px;padding:7px 9px}.choice{min-height:150px;padding:15px 8px;border-radius:18px}.choice .symbol{font-size:35px}.panel{border-radius:22px}.stats{gap:8px}.stat{padding:12px}.bigpct{font-size:24px}.hero{padding-top:10px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">🗳️</div><div><div class="eyebrow">Votação entre amigos</div><h1>Urna da Galera</h1></div></div>
+    <div class="pill">● AO VIVO · <span id="session">conectando</span></div>
+  </header>
+  <section class="hero">
+    <div class="emoji">🤔</div>
+    <h2>Você decide!</h2>
+    <p>Escolha seu voto e acompanhe a apuração ao vivo. Sem complicação, só diversão!</p>
+  </section>
+  <section class="panel">
+    <div class="choices">
+      <button class="choice true" id="yes" aria-label="Votar verdadeiro">
+        <span class="symbol">✅</span><strong>VERDADEIRO</strong><small>Sou a favor / Sim</small>
+      </button>
+      <button class="choice false" id="no" aria-label="Votar falso">
+        <span class="symbol">❌</span><strong>FALSO</strong><small>Sou contra / Não</small>
+      </button>
+    </div>
+    <div class="notice" id="notice" role="status" aria-live="polite">Conectando à urna…</div>
+    <div class="results">
+      <div class="result-head"><h3>📊 Apuração ao vivo</h3><div class="total"><strong id="total">0</strong> votos</div></div>
+      <div class="stats">
+        <div class="stat">
+          <div class="statline"><span>✅ Verdadeiro</span><strong id="yesCount">0 votos</strong></div>
+          <div class="track"><div class="fill green" id="yesBar"></div></div>
+          <div class="bigpct" id="yesPct">0%</div><div class="caption">a favor / sim</div>
+        </div>
+        <div class="stat">
+          <div class="statline"><span>❌ Falso</span><strong id="noCount">0 votos</strong></div>
+          <div class="track"><div class="fill red" id="noBar"></div></div>
+          <div class="bigpct" id="noPct">0%</div><div class="caption">contra / não</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="status"><span class="dot" id="dot"></span><span id="connection">Ligando ao servidor…</span></div>
+      <button class="secondary" id="share">🔗 Compartilhar votação</button>
+    </div>
+    <details class="admin">
+      <summary>🔒 Área do organizador — iniciar nova rodada</summary>
+      <div class="adminrow"><input id="pin" type="password" inputmode="numeric" placeholder="PIN do organizador" aria-label="PIN do organizador" maxlength="32"><button class="secondary" id="reset">Zerar votação</button></div>
+      <div class="tiny">A nova rodada apaga os votos atuais de todos os participantes. PIN padrão para teste: <strong>2468</strong>. Altere ADMIN_PIN nas variáveis de ambiente antes de publicar.</div>
+    </details>
+    <p class="tiny">Brincadeira informal: não é uma urna oficial. A limitação de um voto por aparelho usa o navegador e não equivale a uma votação segura ou anônima certificada.</p>
+  </section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+const socket = io();
+const $ = id => document.getElementById(id);
+let alreadyVoted = localStorage.getItem("urna-voted") === "yes";
+let currentSession = null;
+
+function setNotice(message, bad=false){$("notice").textContent=message;$("notice").style.color=bad?"#fda4af":"#c4b5fd";}
+function updateButtons(){ $("yes").disabled=alreadyVoted; $("no").disabled=alreadyVoted; }
+function render(s){
+  if(currentSession !== s.sessionId){currentSession=s.sessionId;alreadyVoted=localStorage.getItem("urna-session")===s.sessionId && localStorage.getItem("urna-voted")==="yes";updateButtons();}
+  $("session").textContent=s.sessionId;
+  $("total").textContent=s.total;
+  $("yesCount").textContent=`${s.votes.verdadeiro} ${s.votes.verdadeiro===1?"voto":"votos"}`;
+  $("noCount").textContent=`${s.votes.falso} ${s.votes.falso===1?"voto":"votos"}`;
+  $("yesPct").textContent=s.percentages.verdadeiro+"%";
+  $("noPct").textContent=s.percentages.falso+"%";
+  $("yesBar").style.width=s.percentages.verdadeiro+"%";
+  $("noBar").style.width=s.percentages.falso+"%";
+}
+socket.on("connect",()=>{$("connection").textContent="Conectado · atualizações em tempo real";$("dot").style.background="#34d399";setNotice(alreadyVoted?"Seu voto já foi registrado nesta rodada.":"Escolha uma das opções abaixo.");});
+socket.on("disconnect",()=>{$("connection").textContent="Reconectando…";$("dot").style.background="#fb7185";setNotice("Conexão interrompida. Tentando reconectar…",true);});
+socket.on("state",render);
+function vote(choice){
+  if(alreadyVoted){setNotice("Este aparelho já votou nesta rodada.",true);return;}
+  const voterId=localStorage.getItem("urna-voter-id") || (()=>{const id=Array.from(crypto.getRandomValues(new Uint8Array(18))).map(x=>x.toString(16).padStart(2,"0")).join("");localStorage.setItem("urna-voter-id",id);return id;})();
+  $("yes").disabled=true;$("no").disabled=true;
+  socket.emit("vote",{choice,voterId});
+}
+$("yes").addEventListener("click",()=>vote("verdadeiro"));
+$("no").addEventListener("click",()=>vote("falso"));
+socket.on("vote-result",r=>{
+  if(r.ok){alreadyVoted=true;localStorage.setItem("urna-voted","yes");localStorage.setItem("urna-session",currentSession);updateButtons();setNotice(r.message);confetti();}
+  else{updateButtons();setNotice(r.message,true);}
+});
+socket.on("reset-result",r=>{setNotice(r.message,!r.ok);if(r.ok){alreadyVoted=false;localStorage.removeItem("urna-voted");localStorage.setItem("urna-session",currentSession);updateButtons();confetti();}});
+$("reset").addEventListener("click",()=>{if(confirm("Tem certeza? Isso apagará os votos de todos e iniciará uma nova rodada.")){socket.emit("reset",{pin:$("pin").value});$("pin").value="";}});
+$("share").addEventListener("click",async()=>{
+  const data={title:"Urna da Galera",text:"Participe da votação da galera!",url:location.href};
+  try{if(navigator.share) await navigator.share(data);else{await navigator.clipboard.writeText(location.href);setNotice("Link copiado! Envie para seus colegas.");}}
+  catch(e){if(e.name!=="AbortError")setNotice("Copie o endereço do navegador e envie aos colegas.",true);}
+});
+function confetti(){
+  const emojis=["🎉","✨","🎊","⭐","🥳"];
+  for(let i=0;i<14;i++){const el=document.createElement("span");el.className="confetti";el.textContent=emojis[Math.floor(Math.random()*emojis.length)];el.style.left=(8+Math.random()*84)+"%";el.style.top=(45+Math.random()*35)+"%";document.body.appendChild(el);setTimeout(()=>el.remove(),1100);}
+}
+updateButtons();
+</script>
+</body>
+</html>
